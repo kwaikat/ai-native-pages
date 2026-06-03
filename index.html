@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-native 公司：从经营执行平台到资源配置平台</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 16% 6%, rgba(251, 191, 36, 0.16), transparent 28%),
+        radial-gradient(circle at 86% 12%, rgba(34, 211, 238, 0.12), transparent 30%),
+        radial-gradient(circle at 50% 92%, rgba(167, 139, 250, 0.10), transparent 32%),
+        linear-gradient(180deg, #020617 0%, #050816 52%, #020617 100%);
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      padding: 44px 24px 64px;
+    }
+    .page { max-width: 1180px; margin: 0 auto; }
+    .hero { text-align: center; margin-bottom: 26px; }
+    .eyebrow { color: #fbbf24; font-size: 13px; letter-spacing: 0.18em; font-weight: 800; margin-bottom: 10px; }
+    h1 { margin: 0; font-size: 38px; line-height: 1.18; letter-spacing: -0.045em; color: #f8fafc; font-weight: 900; }
+    .subtitle { margin: 14px auto 0; max-width: 820px; color: #94a3b8; font-size: 17px; }
+    .thesis {
+      margin: 24px auto 0; max-width: 900px; padding: 18px 24px;
+      border: 1px solid rgba(251, 191, 36, 0.28); border-radius: 18px;
+      background: rgba(251, 191, 36, 0.08); color: #fef3c7;
+      font-size: 20px; font-weight: 800;
+    }
+    .hero-images {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+      margin: 28px 0 28px; padding: 18px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 28px; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+    .figure { background: rgba(2, 6, 23, 0.72); border: 1px solid rgba(148, 163, 184, 0.16); border-radius: 22px; padding: 14px; margin: 0; }
+    .figure img { width: 100%; display: block; border-radius: 16px; background: #020617; }
+    .caption { margin-top: 10px; color: #94a3b8; font-size: 13px; text-align: center; }
+
+    .section {
+      margin-top: 26px; background: rgba(15, 23, 42, 0.76);
+      border: 1px solid rgba(148, 163, 184, 0.18); border-radius: 28px;
+      overflow: hidden; box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+    }
+    .section-inner { padding: 34px 40px 38px; }
+    .chapter-label { display: inline-flex; align-items: center; gap: 8px; color: #22d3ee; font-size: 12px; letter-spacing: 0.14em; font-weight: 800; margin-bottom: 8px; }
+    .chapter-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #22d3ee; box-shadow: 0 0 18px rgba(34, 211, 238, 0.95); }
+    h2 { margin: 0 0 20px; color: #f8fafc; font-size: 27px; line-height: 1.25; letter-spacing: -0.03em; font-weight: 900; }
+    .chapter-summary {
+      margin: 0 0 22px; padding: 16px 18px;
+      border-left: 4px solid #fbbf24; border-radius: 14px;
+      background: rgba(251, 191, 36, 0.07);
+      color: #fef3c7; font-size: 18px; font-weight: 800; line-height: 1.55;
+    }
+
+    .points { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .point {
+      min-height: 330px; padding: 18px;
+      background: rgba(2, 6, 23, 0.54);
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      border-radius: 22px;
+    }
+    .point h3 { margin: 0 0 8px; color: #f8fafc; font-size: 20px; letter-spacing: -0.02em; }
+    .point p { margin: 0 0 14px; color: #cbd5e1; font-size: 15.5px; line-height: 1.65; }
+    .point svg { width: 100%; height: auto; display: block; border-radius: 16px; background: #020617; }
+    .quote {
+      margin-top: 22px; padding: 20px 24px; border-left: 4px solid #fbbf24; border-radius: 14px;
+      background: rgba(251, 191, 36, 0.07); color: #fef3c7; font-size: 19px; font-weight: 800; line-height: 1.65;
+    }
+    .insight-block {
+      margin-top: 20px;
+      padding: 22px 26px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(251,191,36,.10), rgba(34,211,238,.06));
+      border: 1px solid rgba(251,191,36,.30);
+      color: #f8fafc;
+      font-size: 18px;
+      line-height: 1.72;
+      font-weight: 750;
+    }
+    .insight-block strong { color: #fbbf24; font-weight: 950; }
+    .tag { fill: #94a3b8; font-size: 12px; font-weight: 700; }
+    .label { fill: #f8fafc; font-size: 15px; font-weight: 900; }
+    .small { fill: #94a3b8; font-size: 11px; font-weight: 700; }
+    @media (max-width: 900px) {
+      body { padding: 28px 14px 44px; }
+      h1 { font-size: 30px; }
+      .section-inner { padding: 26px 22px 30px; }
+      .hero-images, .points { grid-template-columns: 1fr; }
+      .point { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">AI-NATIVE ORGANIZATION</div>
+      <h1>AI-native 公司：从经营执行平台到资源配置平台</h1>
+      <div class="subtitle">核心不是“多用 AI”，而是公司之间的差别会从执行差别迁移为资源配置差别。</div>
+      <div class="thesis">AI-native 公司会从经营执行平台，转向资源配置平台。</div>
+    </header>
+
+    <div class="hero-images">
+      <figure class="figure">
+        <img src="ai_native_left_capital_pyramid_icons_gpt54.png" alt="传统资本配置金字塔" />
+        <figcaption class="caption">传统资本配置金字塔：经营实体向配置载体上浮</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="ai_native_right_internal_pyramid_gpt54.png" alt="AI-native 公司内部配置金字塔" />
+        <figcaption class="caption">AI-native 公司内部配置金字塔：资源配置成为核心层</figcaption>
+      </figure>
+    </div>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="chapter-label">CHAPTER 01</div>
+        <h2>AI-native 公司会从经营执行平台转向资源配置平台</h2>
+        <div class="chapter-summary">执行和事务性判断的绑定被拆开后，人的决策位置自然上移；公司差别也从执行差别迁移为资源配置差别。</div>
+
+        <div class="points">
+          <div class="point">
+            <h3>1. 传统公司：执行与判断绑定在人身上</h3>
+            <p>传统组织必须围绕人来设计岗位、流程和管理动作，因为具体执行与事务性判断长期绑定在同一个人身上。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="58" y="58" width="138" height="76" rx="16" fill="rgba(96,165,250,.12)" stroke="#60a5fa"/>
+              <text x="127" y="91" text-anchor="middle" class="label">执行</text>
+              <text x="127" y="115" text-anchor="middle" class="small">具体动作</text>
+              <rect x="304" y="58" width="138" height="76" rx="16" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="373" y="91" text-anchor="middle" class="label">判断</text>
+              <text x="373" y="115" text-anchor="middle" class="small">事务决策</text>
+              <path d="M198 96 L302 96" stroke="#fbbf24" stroke-width="4"/>
+              <text x="250" y="78" text-anchor="middle" fill="#fef3c7" font-size="13" font-weight="800">绑定</text>
+              <circle cx="250" cy="145" r="20" fill="rgba(148,163,184,.16)" stroke="#94a3b8"/>
+              <text x="250" y="151" text-anchor="middle" fill="#e5e7eb" font-size="22">人</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>2. AI-native：低层事务性判断开始托管</h3>
+            <p>Agent 接走的不只是动作，还会逐步接走任务内部的低层判断，传统绑定关系因此被拆开。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="46" y="62" width="128" height="68" rx="15" fill="rgba(148,163,184,.12)" stroke="#64748b"/>
+              <text x="110" y="92" text-anchor="middle" class="label">人</text>
+              <text x="110" y="114" text-anchor="middle" class="small">原承载者</text>
+              <path d="M180 96 L306 96" stroke="#22d3ee" stroke-width="4" marker-end="url(#a1)"/>
+              <rect x="320" y="48" width="134" height="96" rx="18" fill="rgba(34,211,238,.12)" stroke="#22d3ee"/>
+              <text x="387" y="84" text-anchor="middle" fill="#a5f3fc" font-size="17" font-weight="900">Agent</text>
+              <text x="387" y="110" text-anchor="middle" class="small">托管低层判断</text>
+              <text x="250" y="72" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="800">事务性判断外移</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>3. 人的决策位置上移</h3>
+            <p>当低层判断被托管，owner 不再主要回答“具体怎么做”，而是回答“资源应该投向哪里”。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#fbbf24"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="78" y="116" width="344" height="42" rx="12" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="250" y="143" text-anchor="middle" class="small">低层：具体执行 / 事务判断</text>
+              <rect x="118" y="38" width="264" height="52" rx="14" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="250" y="70" text-anchor="middle" fill="#fde68a" font-size="17" font-weight="900">资源配置判断</text>
+              <path d="M250 112 L250 93" stroke="#fbbf24" stroke-width="4" marker-end="url(#a2)"/>
+              <text x="300" y="108" fill="#94a3b8" font-size="12" font-weight="800">决策位置上移</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>4. 公司差别迁移为配置差别</h3>
+            <p>新的组织优势不再主要来自执行体系，而来自更准确地配置资源、约束风险、判断加码和止损。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#a78bfa"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="42" y="62" width="155" height="68" rx="15" fill="rgba(96,165,250,.10)" stroke="#60a5fa"/>
+              <text x="119" y="92" text-anchor="middle" class="label">执行差别</text>
+              <text x="119" y="115" text-anchor="middle" class="small">传统优势</text>
+              <path d="M206 96 L293 96" stroke="#a78bfa" stroke-width="4" marker-end="url(#a3)"/>
+              <rect x="304" y="52" width="154" height="88" rx="16" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="381" y="86" text-anchor="middle" fill="#ddd6fe" font-size="17" font-weight="900">配置差别</text>
+              <text x="381" y="112" text-anchor="middle" class="small">新组织优势</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="insight-block">
+          谁能更准确地判断<strong>目标价值</strong>、把控<strong>资源分配</strong>、发现 <strong>alpha</strong>（沉淀下来的每一个关键业务判断和技术优势）、并有效<strong>组合</strong>散落的 alpha（如量化投资里的多因子模型、大型推荐系统里的 Combo 实验），谁就能形成显著优势。<br />
+          这本质上要求组织能持续做出有效判断和高效资源配置，日常不断积累优势，并拥有一套行之有效的组合优势机制。
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="chapter-label">CHAPTER 02</div>
+        <h2>预算机制是资源配置平台的第一块地基</h2>
+        <div class="chapter-summary">预算把资源配置从隐性消耗，变成可讨论、可约束、可复盘、可调仓的组织机制。</div>
+
+        <div class="points">
+          <div class="point">
+            <h3>1. 预算把配置判断显性化</h3>
+            <p>没有预算，资源配置仍然是隐性的；有了预算，每次投入都必须对应预期收益和风险边界。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="52" y="62" width="150" height="68" rx="15" fill="rgba(148,163,184,.10)" stroke="#64748b"/>
+              <text x="127" y="92" text-anchor="middle" class="label">隐性消耗</text>
+              <text x="127" y="115" text-anchor="middle" class="small">看不清投入</text>
+              <path d="M210 96 L290 96" stroke="#22d3ee" stroke-width="4" marker-end="url(#b1)"/>
+              <rect x="300" y="52" width="150" height="88" rx="16" fill="rgba(34,211,238,.12)" stroke="#22d3ee"/>
+              <text x="375" y="86" text-anchor="middle" fill="#a5f3fc" font-size="17" font-weight="900">显性预算</text>
+              <text x="375" y="112" text-anchor="middle" class="small">投入 / 收益 / 风险</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>2. 预算显影 owner 的 AI 边界认知</h3>
+            <p>owner 怎么提预算，反映他如何理解当前 AI 能做什么、不能做什么，以及哪里必须保留人工判断。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <circle cx="150" cy="96" r="58" fill="rgba(251,191,36,.12)" stroke="#fbbf24" stroke-width="2"/>
+              <text x="150" y="91" text-anchor="middle" fill="#fde68a" font-size="18" font-weight="900">预算</text>
+              <text x="150" y="116" text-anchor="middle" class="small">提出方式</text>
+              <rect x="274" y="46" width="166" height="100" rx="18" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="357" y="82" text-anchor="middle" fill="#ddd6fe" font-size="17" font-weight="900">能力边界</text>
+              <text x="357" y="108" text-anchor="middle" class="small">能做 / 不能做</text>
+              <text x="357" y="130" text-anchor="middle" class="small">自动 / 人工兜底</text>
+              <path d="M209 96 L270 96" stroke="#fbbf24" stroke-width="4"/>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>3. 预算让项目探索有边界</h3>
+            <p>创业组织早期只有项目。预算让每次探索变成有投入额度、运行周期、复盘标准和止损条件的下注。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="90" y="42" width="320" height="106" rx="20" fill="rgba(34,211,238,.08)" stroke="#22d3ee" stroke-dasharray="8 6"/>
+              <text x="250" y="76" text-anchor="middle" fill="#a5f3fc" font-size="18" font-weight="900">项目边界</text>
+              <text x="250" y="104" text-anchor="middle" class="small">投入额度 · 周期 · 复盘 · 止损</text>
+              <circle cx="250" cy="148" r="18" fill="rgba(251,191,36,.16)" stroke="#fbbf24"/>
+              <text x="250" y="154" text-anchor="middle" fill="#fef3c7" font-size="13" font-weight="900">下注</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>4. 预算最终长出 portfolio 机制</h3>
+            <p>项目跑出长期价值后形成稳定结构；项目和结构变多后，预算自然上升为组合配置机制。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="b4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#34d399"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="42" y="72" width="110" height="54" rx="14" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="97" y="105" text-anchor="middle" fill="#ddd6fe" font-size="15" font-weight="900">项目</text>
+              <path d="M156 99 L214 99" stroke="#34d399" stroke-width="4" marker-end="url(#b4)"/>
+              <rect x="220" y="58" width="126" height="82" rx="16" fill="rgba(52,211,153,.12)" stroke="#34d399"/>
+              <text x="283" y="92" text-anchor="middle" fill="#bbf7d0" font-size="15" font-weight="900">稳定结构</text>
+              <text x="283" y="115" text-anchor="middle" class="small">长期价值</text>
+              <path d="M350 99 L406 99" stroke="#34d399" stroke-width="4" marker-end="url(#b4)"/>
+              <circle cx="436" cy="99" r="36" fill="rgba(251,191,36,.14)" stroke="#fbbf24"/>
+              <text x="436" y="95" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="900">Portfolio</text>
+              <text x="436" y="115" text-anchor="middle" class="small">调仓</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="quote">预算不是财务流程，而是资源配置平台的运行语言。</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
