@@ -64,7 +64,7 @@
     }
     .point h3 { margin: 0 0 8px; color: #f8fafc; font-size: 20px; letter-spacing: -0.02em; }
     .point p { margin: 0 0 14px; color: #cbd5e1; font-size: 15.5px; line-height: 1.65; }
-    .point svg { width: 100%; height: auto; display: block; border-radius: 16px; background: #020617; }
+    .point svg, .point img { width: 100%; height: auto; display: block; border-radius: 16px; background: #020617; }
     .quote {
       margin-top: 22px; padding: 20px 24px; border-left: 4px solid #fbbf24; border-radius: 14px;
       background: rgba(251, 191, 36, 0.07); color: #fef3c7; font-size: 19px; font-weight: 800; line-height: 1.65;
@@ -198,22 +198,32 @@
       <div class="section-inner">
         <div class="chapter-label">CHAPTER 02</div>
         <h2>预算机制是资源配置平台的第一块地基</h2>
-        <div class="chapter-summary">预算把资源配置从隐性消耗，变成可讨论、可约束、可复盘、可调仓的组织机制。</div>
+        <div class="chapter-summary">预算不是单一财务数字，而是时间、执行力、注意力、Infra 四类资源的组合包；它把资源配置从隐性消耗，变成可讨论、可约束、可复盘的组织机制。</div>
 
         <div class="points">
           <div class="point">
-            <h3>1. 预算把配置判断显性化</h3>
-            <p>没有预算，资源配置仍然是隐性的；有了预算，每次投入都必须对应预期收益和风险边界。</p>
+            <h3>1. 预算 = 四类资源组合包</h3>
+            <p>一个事情要 kick off，owner 必须明确需要多少时间资源、执行力资源、注意力资源和 Infra 资源。</p>
             <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
               <defs><marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
               <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
-              <rect x="52" y="62" width="150" height="68" rx="15" fill="rgba(148,163,184,.10)" stroke="#64748b"/>
-              <text x="127" y="92" text-anchor="middle" class="label">隐性消耗</text>
-              <text x="127" y="115" text-anchor="middle" class="small">看不清投入</text>
-              <path d="M210 96 L290 96" stroke="#22d3ee" stroke-width="4" marker-end="url(#b1)"/>
-              <rect x="300" y="52" width="150" height="88" rx="16" fill="rgba(34,211,238,.12)" stroke="#22d3ee"/>
-              <text x="375" y="86" text-anchor="middle" fill="#a5f3fc" font-size="17" font-weight="900">显性预算</text>
-              <text x="375" y="112" text-anchor="middle" class="small">投入 / 收益 / 风险</text>
+              <rect x="24" y="72" width="76" height="46" rx="12" fill="rgba(148,163,184,.12)" stroke="#94a3b8"/>
+              <text x="62" y="100" text-anchor="middle" fill="#e5e7eb" font-size="14" font-weight="900">Owner</text>
+              <path d="M104 95 L148 95" stroke="#22d3ee" stroke-width="3" marker-end="url(#b1)"/>
+              <circle cx="205" cy="95" r="44" fill="rgba(251,191,36,.14)" stroke="#fbbf24" stroke-width="2"/>
+              <text x="205" y="91" text-anchor="middle" fill="#fde68a" font-size="18" font-weight="900">预算</text>
+              <text x="205" y="113" text-anchor="middle" class="small">资源包</text>
+              <path d="M252 95 L298 95" stroke="#22d3ee" stroke-width="3" marker-end="url(#b1)"/>
+              <rect x="302" y="72" width="76" height="46" rx="12" fill="rgba(34,211,238,.12)" stroke="#22d3ee"/>
+              <text x="340" y="100" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="900">Kick off</text>
+              <rect x="396" y="24" width="80" height="34" rx="10" fill="rgba(96,165,250,.10)" stroke="#60a5fa"/>
+              <text x="436" y="45" text-anchor="middle" class="small">时间资源</text>
+              <rect x="396" y="66" width="80" height="34" rx="10" fill="rgba(251,191,36,.10)" stroke="#fbbf24"/>
+              <text x="436" y="87" text-anchor="middle" class="small">执行力资源</text>
+              <rect x="396" y="108" width="80" height="34" rx="10" fill="rgba(167,139,250,.10)" stroke="#a78bfa"/>
+              <text x="436" y="129" text-anchor="middle" class="small">注意力资源</text>
+              <rect x="396" y="150" width="80" height="34" rx="10" fill="rgba(52,211,153,.10)" stroke="#34d399"/>
+              <text x="436" y="171" text-anchor="middle" class="small">Infra资源</text>
             </svg>
           </div>
 
@@ -261,7 +271,7 @@
               <path d="M350 99 L406 99" stroke="#34d399" stroke-width="4" marker-end="url(#b4)"/>
               <circle cx="436" cy="99" r="36" fill="rgba(251,191,36,.14)" stroke="#fbbf24"/>
               <text x="436" y="95" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="900">Portfolio</text>
-              <text x="436" y="115" text-anchor="middle" class="small">调仓</text>
+              <text x="436" y="115" text-anchor="middle" class="small">调整</text>
             </svg>
           </div>
         </div>
@@ -269,6 +279,242 @@
         <div class="quote">预算不是财务流程，而是资源配置平台的运行语言。</div>
       </div>
     </section>
+
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="chapter-label">CHAPTER 03</div>
+        <h2>从 0 开始的 AI-native 团队怎么 run</h2>
+        <div class="chapter-summary">组织不是先画出来的，而是资源配置机制跑久之后自然长出来的。</div>
+
+        <div class="points">
+          <div class="point">
+            <h3>1. 项目阶段：先配置资源与权限</h3>
+            <p>团队一开始只有目标和项目。按“重要性 / 紧急性”区分事情，给不同项目配置不同资源、权限和运行边界。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <circle cx="92" cy="92" r="48" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <circle cx="92" cy="92" r="24" fill="rgba(251,191,36,.16)" stroke="#fbbf24"/>
+              <text x="92" y="98" text-anchor="middle" fill="#fde68a" font-size="16" font-weight="900">目标</text>
+              <path d="M145 92 L210 92" stroke="#22d3ee" stroke-width="4" marker-end="url(#c1)"/>
+              <rect x="220" y="42" width="220" height="100" rx="18" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="330" y="76" text-anchor="middle" fill="#a5f3fc" font-size="17" font-weight="900">项目资源包</text>
+              <text x="330" y="103" text-anchor="middle" class="small">重要性 / 紧急性</text>
+              <text x="330" y="126" text-anchor="middle" class="small">资源 · 权限 · 边界</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>2. 结构形成：把维护对象交给常驻 agent</h3>
+            <p>项目跑一段时间后，会出现需要长期维护的对象。此时把项目资源转成常驻资源，但预算固定、权限收窄、目标清晰。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="c2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#34d399"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="48" y="58" width="132" height="76" rx="16" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="114" y="91" text-anchor="middle" fill="#ddd6fe" font-size="16" font-weight="900">项目资源</text>
+              <text x="114" y="116" text-anchor="middle" class="small">临时投入</text>
+              <path d="M188 96 L276 96" stroke="#34d399" stroke-width="4" marker-end="url(#c2)"/>
+              <rect x="288" y="44" width="160" height="104" rx="20" fill="rgba(52,211,153,.12)" stroke="#34d399"/>
+              <text x="368" y="78" text-anchor="middle" fill="#bbf7d0" font-size="17" font-weight="900">常驻 agent</text>
+              <text x="368" y="104" text-anchor="middle" class="small">固定预算</text>
+              <text x="368" y="126" text-anchor="middle" class="small">收窄权限 · 持续反馈</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>3. 稳定运行：维护与探索同时发生</h3>
+            <p>稳定结构形成后，一边让常驻 agent 维护已有业务；一边划出资源做新项目、新算法、新组合，发现新的 alpha。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="c3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#fbbf24"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="48" y="42" width="160" height="50" rx="14" fill="rgba(52,211,153,.12)" stroke="#34d399"/>
+              <text x="128" y="73" text-anchor="middle" fill="#bbf7d0" font-size="15" font-weight="900">常驻维护</text>
+              <rect x="48" y="108" width="160" height="50" rx="14" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="128" y="139" text-anchor="middle" fill="#fde68a" font-size="15" font-weight="900">新机会探索</text>
+              <path d="M214 67 L292 92" stroke="#fbbf24" stroke-width="3" marker-end="url(#c3)"/>
+              <path d="M214 133 L292 104" stroke="#fbbf24" stroke-width="3" marker-end="url(#c3)"/>
+              <rect x="300" y="62" width="150" height="72" rx="16" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="375" y="93" text-anchor="middle" fill="#ddd6fe" font-size="16" font-weight="900">能力组合</text>
+              <text x="375" y="116" text-anchor="middle" class="small">沉淀优势 + 新 alpha</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>4. 市场反馈：驱动资源配置调整</h3>
+            <p>历史能力和新机会必须被市场反馈验证。有效组合进入稳定结构，无效组合快速停止，资源配置随反馈动态调整。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="c4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="44" y="62" width="128" height="68" rx="15" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="108" y="91" text-anchor="middle" fill="#ddd6fe" font-size="15" font-weight="900">能力组合</text>
+              <path d="M176 96 L246 96" stroke="#22d3ee" stroke-width="4" marker-end="url(#c4)"/>
+              <rect x="254" y="50" width="112" height="92" rx="18" fill="rgba(34,211,238,.12)" stroke="#22d3ee"/>
+              <text x="310" y="84" text-anchor="middle" fill="#a5f3fc" font-size="15" font-weight="900">市场反馈</text>
+              <text x="310" y="110" text-anchor="middle" class="small">验证有效性</text>
+              <path d="M370 96 L430 96" stroke="#22d3ee" stroke-width="4" marker-end="url(#c4)"/>
+              <circle cx="452" cy="96" r="32" fill="rgba(251,191,36,.14)" stroke="#fbbf24"/>
+              <text x="452" y="91" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="900">资源</text>
+              <text x="452" y="111" text-anchor="middle" fill="#fde68a" font-size="13" font-weight="900">调整</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="quote">目标判断 → 资源配置 → agent 执行 → 市场反馈 → 能力沉淀 → 能力组合 → 资源配置调整。</div>
+      </div>
+    </section>
+
+
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="chapter-label">CHAPTER 04</div>
+        <h2>Multi-agent system：先做自己的模型路由中转站</h2>
+        <div class="chapter-summary">Multi-agent system 现在仍偏 research：真实业务里风险高、infra 不健全、反馈链路长，很多尝试还停留在 demo 或具体模块。模型路由中转站，是研究 multi-agent 的最佳媒介之一：反馈信号清晰，ROI 可直接观察。</div>
+
+        <div class="points">
+          <div class="point">
+            <h3>1. 一个 session 本质上就是一棵 agent 树</h3>
+            <p>每个分叉都是一次 subagent 派生；分叉时机就是模型切换的操作空间：既可能在该节点省成本用差一点的模型，也可能为了关键节点的效果用更好的模型。</p>
+            <img src="claude_code_multiagent_tree.png" alt="multi-agent session tree" />
+          </div>
+
+          <div class="point">
+            <h3>2. 分叉点就是模型路由点</h3>
+            <p>树上的每个分叉，都可以选择强模型、弱模型或不同 agent 组合：要么省成本，要么在关键节点额外加大投入。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="d2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#fbbf24"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="40" y="74" width="100" height="44" rx="12" fill="rgba(148,163,184,.12)" stroke="#94a3b8"/>
+              <text x="90" y="101" text-anchor="middle" fill="#e5e7eb" font-size="14" font-weight="900">分岔点</text>
+              <path d="M144 96 L202 96" stroke="#fbbf24" stroke-width="3" marker-end="url(#d2)"/>
+              <rect x="210" y="52" width="110" height="88" rx="16" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="265" y="87" text-anchor="middle" fill="#fde68a" font-size="16" font-weight="900">中转站</text>
+              <text x="265" y="112" text-anchor="middle" class="small">模型路由</text>
+              <path d="M324 78 L388 48" stroke="#fbbf24" stroke-width="3" marker-end="url(#d2)"/>
+              <path d="M324 96 L388 96" stroke="#fbbf24" stroke-width="3" marker-end="url(#d2)"/>
+              <path d="M324 114 L388 144" stroke="#fbbf24" stroke-width="3" marker-end="url(#d2)"/>
+              <rect x="396" y="28" width="72" height="36" rx="10" fill="rgba(251,191,36,.10)" stroke="#fbbf24"/>
+              <text x="432" y="51" text-anchor="middle" class="small">强模型</text>
+              <rect x="396" y="78" width="72" height="36" rx="10" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="432" y="101" text-anchor="middle" class="small">中模型</text>
+              <rect x="396" y="128" width="72" height="36" rx="10" fill="rgba(52,211,153,.10)" stroke="#34d399"/>
+              <text x="432" y="151" text-anchor="middle" class="small">弱模型</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>3. 路由 benchmark 能给出清晰反馈</h3>
+            <p>Multi-agent 很难在真实业务里直接验证，但模型路由可以搭静态 benchmark：同样效果下，比较不同路由策略谁成本更低。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="44" y="48" width="160" height="96" rx="18" fill="rgba(251,191,36,.10)" stroke="#fbbf24"/>
+              <text x="124" y="82" text-anchor="middle" fill="#fde68a" font-size="16" font-weight="900">系统 A</text>
+              <text x="124" y="108" text-anchor="middle" class="small">同样目标</text>
+              <text x="124" y="130" text-anchor="middle" class="small">成本高</text>
+              <rect x="296" y="48" width="160" height="96" rx="18" fill="rgba(52,211,153,.12)" stroke="#34d399"/>
+              <text x="376" y="82" text-anchor="middle" fill="#bbf7d0" font-size="16" font-weight="900">系统 B</text>
+              <text x="376" y="108" text-anchor="middle" class="small">同样目标</text>
+              <text x="376" y="130" text-anchor="middle" class="small">成本低</text>
+              <text x="250" y="92" text-anchor="middle" fill="#e5e7eb" font-size="20" font-weight="900">VS</text>
+              <text x="250" y="164" text-anchor="middle" fill="#fef3c7" font-size="14" font-weight="900">同目标下，成本差 = 配置能力差</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>4. 中转站就是可迭代的研究平台</h3>
+            <p>不同中转站就是不同路由策略。只要实现同样效果，谁花的钱少，谁的 multi-agent system 就更好。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="d4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="50" y="70" width="102" height="52" rx="14" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="101" y="101" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="900">执行记录</text>
+              <path d="M158 96 L218 96" stroke="#22d3ee" stroke-width="3" marker-end="url(#d4)"/>
+              <rect x="226" y="48" width="118" height="96" rx="18" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="285" y="82" text-anchor="middle" fill="#ddd6fe" font-size="15" font-weight="900">路由记忆</text>
+              <text x="285" y="108" text-anchor="middle" class="small">成本 / 质量</text>
+              <text x="285" y="130" text-anchor="middle" class="small">反馈 / 边界</text>
+              <path d="M350 96 L410 96" stroke="#22d3ee" stroke-width="3" marker-end="url(#d4)"/>
+              <rect x="418" y="70" width="52" height="52" rx="14" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="444" y="92" text-anchor="middle" fill="#fde68a" font-size="12" font-weight="900">下次</text>
+              <text x="444" y="110" text-anchor="middle" fill="#fde68a" font-size="12" font-weight="900">更准</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="quote">模型路由中转站的价值：把 multi-agent research 变成可测量、可比较、可迭代的工程问题。</div>
+      </div>
+    </section>
+
+
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="chapter-label">CHAPTER 05</div>
+        <h2>TODO：下一步要立刻推进的三件事</h2>
+        <div class="chapter-summary">如果要把“资源配置平台”从概念变成组织机制，下一步必须先把预算、监控、模型路由三件事落地。</div>
+
+        <div class="points">
+          <div class="point">
+            <h3>1. 尽快实现预算驱动</h3>
+            <p>每一个项目来到，必须明确 deadline（时间资源）、token 额度（智力资源）、人力（注意力资源）、云沙箱（执行力资源）。先从 LLM token 开始，把现在“每个人每天 50 刀额度”的机制，改成项目 owner 或团队 owner 按季度申请项目 token 额度或团队 token 额度。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="e1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#fbbf24"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="36" y="58" width="152" height="74" rx="16" fill="rgba(148,163,184,.12)" stroke="#64748b"/>
+              <text x="112" y="88" text-anchor="middle" fill="#e5e7eb" font-size="15" font-weight="900">个人额度</text>
+              <text x="112" y="113" text-anchor="middle" class="small">每天 50 刀</text>
+              <path d="M196 95 L292 95" stroke="#fbbf24" stroke-width="4" marker-end="url(#e1)"/>
+              <rect x="304" y="44" width="160" height="102" rx="18" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="384" y="78" text-anchor="middle" fill="#fde68a" font-size="15" font-weight="900">季度预算</text>
+              <text x="384" y="104" text-anchor="middle" class="small">项目 owner</text>
+              <text x="384" y="126" text-anchor="middle" class="small">团队 owner</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>2. 所有 LLM 调用必须被监控沉淀</h3>
+            <p>目前 Claude Code plan、Cursor plan、Codex plan 等不走自己的 token 网关，调用和成本都无法统一沉淀；这些漏洞需要全部堵住。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="e2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#22d3ee"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="38" y="34" width="120" height="38" rx="10" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="98" y="58" text-anchor="middle" class="small">Claude Code</text>
+              <rect x="38" y="82" width="120" height="38" rx="10" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="98" y="106" text-anchor="middle" class="small">Cursor</text>
+              <rect x="38" y="130" width="120" height="38" rx="10" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="98" y="154" text-anchor="middle" class="small">Codex</text>
+              <path d="M164 53 L284 95" stroke="#22d3ee" stroke-width="3" marker-end="url(#e2)"/>
+              <path d="M164 101 L284 96" stroke="#22d3ee" stroke-width="3" marker-end="url(#e2)"/>
+              <path d="M164 149 L284 98" stroke="#22d3ee" stroke-width="3" marker-end="url(#e2)"/>
+              <rect x="296" y="56" width="160" height="82" rx="18" fill="rgba(251,191,36,.12)" stroke="#fbbf24"/>
+              <text x="376" y="88" text-anchor="middle" fill="#fde68a" font-size="15" font-weight="900">统一 Token 网关</text>
+              <text x="376" y="114" text-anchor="middle" class="small">监控 · 成本 · 沉淀</text>
+            </svg>
+          </div>
+
+          <div class="point">
+            <h3>3. 成立长期小分队做模型路由</h3>
+            <p>专门成立长期小分队做模型路由：既能深入 multi-agent system，为公司节省的 token 成本又能直接让老板看到。</p>
+            <svg viewBox="0 0 500 190" xmlns="http://www.w3.org/2000/svg">
+              <defs><marker id="e3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#34d399"/></marker></defs>
+              <rect x="0" y="0" width="500" height="190" rx="16" fill="#020617"/>
+              <rect x="46" y="58" width="132" height="76" rx="16" fill="rgba(167,139,250,.12)" stroke="#a78bfa"/>
+              <text x="112" y="88" text-anchor="middle" fill="#ddd6fe" font-size="15" font-weight="900">长期小分队</text>
+              <text x="112" y="113" text-anchor="middle" class="small">模型路由</text>
+              <path d="M184 96 L252 96" stroke="#34d399" stroke-width="4" marker-end="url(#e3)"/>
+              <rect x="262" y="38" width="170" height="46" rx="14" fill="rgba(34,211,238,.10)" stroke="#22d3ee"/>
+              <text x="347" y="66" text-anchor="middle" fill="#a5f3fc" font-size="14" font-weight="900">深入 multi-agent</text>
+              <rect x="262" y="106" width="170" height="46" rx="14" fill="rgba(52,211,153,.12)" stroke="#34d399"/>
+              <text x="347" y="134" text-anchor="middle" fill="#bbf7d0" font-size="14" font-weight="900">节省 token 成本</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="quote">先把预算入口、调用监控和模型路由三个抓手做出来，公司才真正开始具备资源配置平台的运行基础。</div>
+      </div>
+    </section>
+
   </main>
 </body>
 </html>
